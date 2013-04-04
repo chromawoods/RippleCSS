@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Andreas Larsson">
+    <meta name="description" content="A webkit experiment for creating water ripples using jQuery and CSS3 animations.">
+    
+    <title>RippleCSS - Demo</title>
+    
+    <link rel="dns-prefetch" href="http://ajax.googleapis.com">
+    <link href="css/main.css" rel="stylesheet">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/jquery.ripplecss.min.js"></script>
+    <script>
+        $(function () {
+            $('.pond1').ripple({
+                ripplesPerSecond : 10,
+                opacity : '.8'
+            });
+
+            $('.pond2').ripple({
+                ripplesPerCluster : 8,
+                animationDuration : 2000
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="pond pond1"></div>
+    <div class="pond pond2"></div>
+</body>
+</html>

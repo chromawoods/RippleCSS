@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+* { margin: 0; padding: 0; }
+html, body { height: 100%; }
+
+@-webkit-keyframes RippleEffect {
+    100% { width: 100px; height: 100px; -webkit-transform: translate(-50px, -50px); }
+}
+@keyframes RippleEffect {
+    100% { width: 100px; height: 100px; -webkit-transform: translate(-50px, -50px); }
+}
+
+.pond { width: 50%; height: 100%; position: relative; overflow: hidden; float: left; }
+.pond1 { background: #aaf; }
+.pond2 { background: #8a8; }
+.ripple {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-radius: 999em;
+    box-shadow: 0 0 2px #fff;
+}
+.expand {
+    -webkit-animation: RippleEffect;
+    animation: RippleEffect;
+}
